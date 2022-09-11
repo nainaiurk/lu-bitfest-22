@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010933605894",
+    "project_id": "jatayat-e6cb5",
+    "storage_bucket": "jatayat-e6cb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010933605894:android:a103e04da8acfe6a3cc587",
+        "android_client_info": {
+          "package_name": "com.example.jatayat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010933605894-iio53bqj30220jgcop8rcfqe7a6jkb3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtIDRQDFpHJwzthiS1mG5Q333cYp7kuXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010933605894-iio53bqj30220jgcop8rcfqe7a6jkb3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
