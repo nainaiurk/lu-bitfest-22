@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jatayat/consumer/authentication/sign_up.dart';
+import 'package:jatayat/consumer/request_seat.dart';
 import '../../main.dart';
 
 class Login extends StatefulWidget {
@@ -55,7 +56,7 @@ class _LoginState extends State<Login> {
                       MaterialForm(
                         controller: _userController, 
                         validator: userValidator, 
-                        hintText: 'User Name',
+                        hintText: 'User Name or ID',
                       ),
                       const SizedBox(height: 20,),
                       MaterialForm(
@@ -72,7 +73,9 @@ class _LoginState extends State<Login> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)
                         ),
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>RequestSeat()));
+                        },
                         child: const Text(
                           'Sign In',
                           style: TextStyle(
