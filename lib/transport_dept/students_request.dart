@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jatayat/transport_dept/optimal_suggestion.dart';
 
 import '../main.dart';
 
@@ -14,13 +15,15 @@ class StudentsRequest extends StatelessWidget {
       child: ListView(
         children:  [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('8:00 Am',style: TextStyle(color: Colors.cyan),),
+              const Text('8:00 Am',style: TextStyle(color: Colors.cyan),),
               TextButton(
-                onPressed: (){}, 
-                child: Text('Get Suggestion',style: TextStyle(color: Colors.orange),),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Suggestion()));
+                }, 
+                child: const Text('Get Suggestion',style: TextStyle(color: Colors.orange),),
               )
-              
             ],
           ),
           const SizedBox(height: 10,),
@@ -28,7 +31,7 @@ class StudentsRequest extends StatelessWidget {
             shape: Border.all(color: themeColor),
             title: const Text('Route - 1',style: TextStyle(fontWeight: FontWeight.bold),),
             leading: const Text('Tilaghor         '),
-            trailing: const Text('Requested - 23'),
+            trailing: const Text('Requested - 40'),
           ),
           ListTile(
             shape: Border.all(color: themeColor),
@@ -40,7 +43,7 @@ class StudentsRequest extends StatelessWidget {
             shape: Border.all(color: themeColor),
             title: const Text('     Route - 3',style: TextStyle(fontWeight: FontWeight.bold),),
             leading: const Text('Lakkatura'),
-            trailing: const Text('Requested - 69'),
+            trailing: const Text('Requested - 78'),
           ),
           ListTile(
             shape: Border.all(color: themeColor),
@@ -52,7 +55,16 @@ class StudentsRequest extends StatelessWidget {
           const Divider(),
           const SizedBox(height: 10,),
 
-          const Text('9:00 Am',style: TextStyle(color: Colors.cyan),),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text('9:00 Am',style: TextStyle(color: Colors.cyan),),
+              TextButton(
+                onPressed: (){}, 
+                child: const Text('Get Suggestion',style: TextStyle(color: Colors.orange),),
+              )
+            ],
+          ),
           const SizedBox(height: 10,),
           ListTile(
             shape: Border.all(color: themeColor),
@@ -82,13 +94,24 @@ class StudentsRequest extends StatelessWidget {
           const Divider(),
           const SizedBox(height: 10,),
 
-          const Text('10:00 Am',style: TextStyle(color: Colors.cyan),),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text('10:00 Am',style: TextStyle(color: Colors.cyan),),
+              TextButton(
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Suggestion()));
+                }, 
+                child: const Text('Get Suggestion',style: TextStyle(color: Colors.orange),),
+              )
+            ],
+          ),
           const SizedBox(height: 10,),
           ListTile(
             shape: Border.all(color: themeColor),
             title: const Text('Route - 1',style: TextStyle(fontWeight: FontWeight.bold),),
             leading: const Text('Tilaghor         '),
-            trailing: const Text('Requested - 23'),
+            trailing: const Text('Requested - 33'),
           ),
           ListTile(
             shape: Border.all(color: themeColor),
@@ -100,7 +123,7 @@ class StudentsRequest extends StatelessWidget {
             shape: Border.all(color: themeColor),
             title: const Text('     Route - 3',style: TextStyle(fontWeight: FontWeight.bold),),
             leading: const Text('Lakkatura'),
-            trailing: const Text('Requested - 69'),
+            trailing: const Text('Requested - 77'),
           ),
           ListTile(
             shape: Border.all(color: themeColor),
