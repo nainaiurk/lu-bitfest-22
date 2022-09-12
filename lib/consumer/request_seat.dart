@@ -121,7 +121,8 @@ class _RequestSeatState extends State<RequestSeat> {
                 title: Text('Bus Schedule'),
               ),
               const Divider(),
-              const ListTile(
+               ListTile(
+                onTap: () => Navigator.of(context),
                 leading: Icon(Icons.logout),
                 title: Text('Log Out'),
               ),

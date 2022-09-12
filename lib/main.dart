@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:jatayat/firebase_options.dart';
-import 'package:jatayat/transport_dept/request_data.dart';
+import 'package:jatayat/welcome_page.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(color: themeColor),
         primarySwatch: Colors.blue,
       ),
-      home: const RequestData()
+      home: const WelcomePage()
     );
   }
 }

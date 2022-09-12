@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:jatayat/main.dart';
+import 'package:jatayat/transport_dept/stuffs_request.dart';
+import 'package:jatayat/transport_dept/teachers_request.dart';
 
 import 'students_request.dart';
 
@@ -47,8 +49,8 @@ class _RequestDataState extends State<RequestData> {
   }
 
   List<Widget> data = [ 
-    StudentsRequest(),
-    Icon(Icons.person),
-    Icon(Icons.person)
+    const StudentsRequest(),
+    const TeachersRequest(),
+    const StuffsRequest()
   ];
 }

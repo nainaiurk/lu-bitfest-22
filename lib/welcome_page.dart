@@ -18,6 +18,7 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset('asset/images/bus.png'),
             Text('Jatayat',style: TextStyle(fontSize: 30,color: themeColor),),
             const SizedBox(height: 100,),
             MaterialButton(

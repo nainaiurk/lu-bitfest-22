@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:jatayat/consumer/authentication/sign_up.dart';
+import 'package:jatayat/consumer/home.dart';
 import 'package:jatayat/consumer/request_seat.dart';
+import 'package:jatayat/transport_dept/request_data.dart';
+import '../../constant/dropdown.dart';
 import '../../main.dart';
 
 class Login extends StatefulWidget {
@@ -13,9 +16,17 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
   final _userController = TextEditingController();
-  final _idController = TextEditingController();
-  final _contactController = TextEditingController();
   final _passController = TextEditingController();
+  var items=[
+    'Consumer',
+    'Transport Dept'
+  ];
+  String role = 'Consumer';
+  roleSelect(value){
+    setState(() {
+      role = value;
+    });
+  }
   userValidator(value){
     if (value!.length>0){
       return null;
@@ -59,6 +70,19 @@ class _LoginState extends State<Login> {
                         hintText: 'User Name or ID',
                       ),
                       const SizedBox(height: 20,),
+                      Material(
+                        elevation: 10,
+                        shadowColor: Colors.cyan,
+                        borderRadius:BorderRadius.circular(20) ,
+                        child: DropDown(
+                          itemList: items, 
+                          select: roleSelect, 
+                          labelText: 'Your Role', 
+                          prefixIcon: Icons.person, 
+                          valuedata: role
+                        ),
+                      ),
+                      const SizedBox(height: 20,),
                       MaterialForm(
                         controller: _passController, 
                         validator: passValidator, 
@@ -74,7 +98,9 @@ class _LoginState extends State<Login> {
                           borderRadius: BorderRadius.circular(20)
                         ),
                         onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>RequestSeat()));
+                          role != 'Consumer'
+                          ? Navigator.push(context, MaterialPageRoute(builder: (context)=>const RequestData()))
+                          : Navigator.push(context, MaterialPageRoute(builder: (context)=>const ConsumerHome()));
                         },
                         child: const Text(
                           'Sign In',
