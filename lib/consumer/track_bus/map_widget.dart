@@ -17,6 +17,11 @@ class _MapWidgetState extends State<MapWidget> {
     getPolyPoints();
     getCurrentLocation();
     setCustomMarkerIcon();
+    if(currentLocation != null){
+      setState(() {
+        
+      });
+    }
     super.initState();
   }
   static const LatLng sourceLocation = LatLng(24.8996, 91.9038);

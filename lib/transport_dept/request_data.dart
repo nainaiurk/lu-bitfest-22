@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'package:jatayat/main.dart';
+import 'package:jatayat/create_update%20route/create_route.dart';
 import 'package:jatayat/transport_dept/input_transport_demand.dart';
 import 'package:jatayat/transport_dept/stuffs_request.dart';
 import 'package:jatayat/transport_dept/teachers_request.dart';
@@ -38,7 +37,7 @@ class _RequestDataState extends State<RequestData> {
     }
     return Scaffold(
       drawer: Container(
-        height: 500,
+        height: 700,
         child: Drawer(
           child: Column(
             children: [
@@ -77,6 +76,14 @@ class _RequestDataState extends State<RequestData> {
                 },
                 title: const Text('Demand For Transport'),
                 leading: const Icon(Icons.bus_alert),
+              ),
+              const SizedBox(height: 10,),
+              ListTile(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const CreateRoute()));
+                },
+                title: const Text('Create Route'),
+                leading: const Icon(Icons.route),
               ),
               const SizedBox(height: 10,),
               ListTile(
