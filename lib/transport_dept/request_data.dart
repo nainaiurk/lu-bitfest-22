@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:jatayat/main.dart';
 import 'package:jatayat/transport_dept/stuffs_request.dart';
 import 'package:jatayat/transport_dept/teachers_request.dart';
+import 'package:jatayat/transport_dept/update_bus_inventory.dart';
+import 'package:jatayat/welcome_page.dart';
 
 import 'students_request.dart';
 
@@ -34,6 +36,51 @@ class _RequestDataState extends State<RequestData> {
       appbar = 'Stuffs Request Data';
     }
     return Scaffold(
+      drawer: Container(
+        height: 500,
+        child: Drawer(
+          child: Column(
+            children: [
+              DrawerHeader(
+                child: Column(
+                  children: const [
+                    CircleAvatar(
+                      radius: 50,
+                      foregroundColor: Colors.green,
+                    ),
+                    Text('Nafi Ullah'),
+                  ],
+                ),
+              ),
+              const Divider(),
+              const SizedBox(height: 10,),
+              ListTile(
+                onTap: () {
+                  
+                },
+                title: const Text('Your Profile'),
+                leading: const Icon(Icons.person),
+              ),
+              const SizedBox(height: 10,),
+              ListTile(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const UpdateBus()));
+                },
+                title: const Text('Update Bus Inventory'),
+                leading: const Icon(Icons.bus_alert),
+              ),
+              const SizedBox(height: 10,),
+              ListTile(
+                onTap: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>WelcomePage()));
+                },
+                title: const Text('Log Out'),
+                leading: const Icon(Icons.logout),
+              ),
+            ],
+          ),
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.people),label: 'Students'),
@@ -41,6 +88,8 @@ class _RequestDataState extends State<RequestData> {
           BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Stuffs'),
         ],
         selectedItemColor: Colors.cyan[800],
+        elevation: 20,
+        currentIndex: _selectedIndex,
         onTap: _onItemTapped,
       ),
       appBar: AppBar(title: Text(appbar),),

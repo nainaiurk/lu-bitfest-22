@@ -13,7 +13,16 @@ class StudentsRequest extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: ListView(
         children:  [
-          const Text('8:00 Am',style: TextStyle(color: Colors.cyan),),
+          Row(
+            children: [
+              Text('8:00 Am',style: TextStyle(color: Colors.cyan),),
+              TextButton(
+                onPressed: (){}, 
+                child: Text('Get Suggestion',style: TextStyle(color: Colors.orange),),
+              )
+              
+            ],
+          ),
           const SizedBox(height: 10,),
           ListTile(
             shape: Border.all(color: themeColor),

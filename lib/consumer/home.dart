@@ -23,11 +23,12 @@ class _ConsumerHomeState extends State<ConsumerHome> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.book),label: 'RequestSeat'),
+          BottomNavigationBarItem(icon: Icon(Icons.book),label: 'RequestSeat',),
           BottomNavigationBarItem(icon: Icon(Icons.location_on_outlined),label: 'Track Bus'),
         ],
-        selectedItemColor: Colors.cyan[800],
+        currentIndex: _selectedIndex,
         onTap: _onItemTapped,
+        selectedItemColor: Colors.cyan[800],
       ),
       body: list.elementAt(_selectedIndex),
     );

@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:jatayat/firebase_options.dart';
+import 'package:jatayat/transport_dept/update_bus_inventory.dart';
 import 'package:jatayat/welcome_page.dart';
 
 Future<void> main() async{
