@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:jatayat/main.dart';
+import 'package:jatayat/transport_dept/input_transport_demand.dart';
 import 'package:jatayat/transport_dept/stuffs_request.dart';
 import 'package:jatayat/transport_dept/teachers_request.dart';
 import 'package:jatayat/transport_dept/update_bus_inventory.dart';
@@ -67,6 +68,14 @@ class _RequestDataState extends State<RequestData> {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>const UpdateBus()));
                 },
                 title: const Text('Update Bus Inventory'),
+                leading: const Icon(Icons.bus_alert),
+              ),
+              const SizedBox(height: 10,),
+              ListTile(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const InputDemand()));
+                },
+                title: const Text('Demand For Transport'),
                 leading: const Icon(Icons.bus_alert),
               ),
               const SizedBox(height: 10,),
